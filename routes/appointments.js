@@ -7,9 +7,9 @@ var knex = require('knex')({
   }
 });
 
-/* GET appointments page. */
+/* GET doctors page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('appointments', { title: 'Appointments' });
 });
 
 module.exports = router;

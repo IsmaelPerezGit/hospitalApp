@@ -9,7 +9,14 @@ var knex = require('knex')({
 
 /* GET hospitals page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  knex.raw(`select * from hospitals`)
+    .then(function(data) {
+      res.render('list', {
+        title: 'Hospitals',
+        list: data.rows
+      });
+      console.log(data.rows);
+    })
 });
 
 module.exports = router;
