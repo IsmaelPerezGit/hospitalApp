@@ -1,0 +1,12 @@
+<h1>Patient Info:</h1>
+{{#each list}}
+  <ul>
+    <h1><strong>Name: </strong>{{this.name}}</h1>
+    <h3><strong>Id: </strong>{{this.id}}</h3>
+    <h3><strong>Age: </strong>{{this.age}}</h3>
+    <h3><strong>Gender: </strong>{{this.gender}}</h3>
+    <h3><strong>Height: </strong>{{this.height}}</h3>
+    <h3><strong>Weight: </strong>{{this.weight}} lbs</h3>
+    <h3><strong>Doctor: </strong>{{this.doctors_name}}</h3>
+  </ul>
+{{/each}}
